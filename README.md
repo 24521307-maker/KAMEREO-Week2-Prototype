@@ -12,9 +12,8 @@ The landing page source is tracked through Git commits to document actual change
 
 ## Version History
 - Initial landing page prototype
-- CTA destination fix
 - UTM tracking update
-- CTA event tracking fix
+- UTM tracking fixing
 
 ## Related Evidence
 The live prototype, screenshots, raw tracking log and walkthrough video are submitted separately as required by the assignment.
