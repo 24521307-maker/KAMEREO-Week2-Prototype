@@ -1,1 +1,313 @@
+<style>
+/* =========================================================
+   KAMEREO JOURNEY PROTOTYPE — CLEAN VERSION
+   Designed for Blogger Pages
+   ========================================================= */
+
+.kr-page {
+  --green: #176b4d;
+  --green-dark: #0d4f38;
+  --green-soft: #edf6f1;
+
+  --orange: #f28c28;
+  --orange-soft: #fff3e5;
+
+  --dark: #18221d;
+  --text: #56615e;
+  --muted: #7b8580;
+
+  --line: #e3e9e5;
+  --soft: #f7f9f7;
+  --white: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: #fff;
+  line-height: 1.5;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.kr-page *,
+.kr-page *::before,
+.kr-page *::after { box-sizing: border-box; }
+.kr-page a { text-decoration: none !important; }
+.kr-container { width: min(1120px, calc(100% - 44px)); margin: 0 auto; }
+
+.kr-nav { display: flex; justify-content: space-between; align-items: center; min-height: 76px; border-bottom: 1px solid var(--line); }
+.kr-logo { display: flex; align-items: center; gap: 9px; font-size: 19px; font-weight: 800; letter-spacing: -0.5px; }
+.kr-logo-mark { width: 31px; height: 31px; display: flex; align-items: center; justify-content: center; border-radius: 9px; background: var(--green); color: white; font-size: 14px; font-weight: 900; }
+.kr-logo-orange { color: var(--orange); }
+.kr-nav-links { display: flex; align-items: center; gap: 26px; font-size: 13px; }
+.kr-nav-links a { color: var(--text); }
+.kr-nav-cta { color: white !important; background: var(--green); padding: 10px 17px; border-radius: 999px; font-weight: 700; }
+
+.kr-hero { display: grid; grid-template-columns: 1.03fr 0.97fr; gap: 60px; align-items: center; padding: 78px 0 88px; }
+.kr-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border-radius: 999px; background: var(--green-soft); color: var(--green); font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; }
+.kr-eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
+.kr-page .kr-h1 { margin: 20px 0 23px; font-family: Arial, Helvetica, sans-serif !important; font-size: 58px; line-height: 1.02; letter-spacing: -2.8px; font-weight: 700 !important; font-style: normal !important; color: var(--dark); }
+.kr-h1-accent { color: var(--green); }
+.kr-hero-description { max-width: 600px; margin: 0 0 28px; color: var(--text); font-size: 17px; line-height: 1.75; }
+.kr-primary-cta { display: inline-flex; align-items: center; gap: 11px; padding: 14px 20px; border-radius: 999px; background: var(--orange); color: white !important; font-size: 14px; font-weight: 800; box-shadow: 0 12px 26px rgba(242, 140, 40, 0.20); }
+.kr-primary-cta-arrow { width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.18); font-size: 15px; }
+.kr-academic-note { max-width: 390px; margin-top: 12px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+
+.kr-visual { position: relative; }
+.kr-main-image { width: 100%; height: 445px; display: block; object-fit: cover; border-radius: 30px 30px 30px 8px; box-shadow: 0 25px 55px rgba(18, 55, 37, 0.13); }
+.kr-visual-info { position: absolute; left: -20px; bottom: -18px; min-width: 235px; padding: 15px 18px; background: white; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 15px 38px rgba(18, 55, 37, 0.11); }
+.kr-visual-info-label { margin-bottom: 4px; color: var(--muted); font-size: 10px; }
+.kr-visual-info-main { color: var(--green); font-size: 16px; font-weight: 800; }
+
+.kr-section { padding: 88px 0; }
+.kr-section-soft { background: var(--soft); }
+.kr-label { margin-bottom: 9px; color: var(--orange); font-size: 10px; font-weight: 800; letter-spacing: 1.3px; text-transform: uppercase; }
+.kr-h2 { margin: 0 0 15px; font-size: 40px; line-height: 1.08; letter-spacing: -1.4px; }
+.kr-section-description { max-width: 720px; margin: 0; color: var(--text); font-size: 15px; line-height: 1.75; }
+
+.kr-old-way { display: grid; grid-template-columns: 0.83fr 1.17fr; gap: 62px; align-items: center; }
+.kr-old-copy p { color: var(--text); font-size: 15px; line-height: 1.75; }
+.kr-friction-list { margin-top: 24px; }
+.kr-friction-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); color: var(--text); font-size: 13px; }
+.kr-friction-number { flex: 0 0 auto; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--orange-soft); color: var(--orange); font-size: 10px; font-weight: 800; }
+.kr-chaos-board { padding: 27px; border: 1px solid var(--line); border-radius: 25px; background: white; box-shadow: 0 15px 38px rgba(20, 50, 35, 0.05); }
+.kr-chaos-label { margin-bottom: 19px; color: var(--muted); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.kr-supplier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.kr-supplier { padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: #fbfcfb; }
+.kr-supplier-top { width: 35px; height: 35px; margin-bottom: 11px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: var(--green-soft); color: var(--green); font-size: 11px; font-weight: 800; }
+.kr-supplier strong { display: block; margin-bottom: 3px; font-size: 13px; }
+.kr-supplier span { color: var(--muted); font-size: 10px; }
+
+.kr-solution { display: grid; grid-template-columns: 0.94fr 1.06fr; gap: 62px; align-items: center; }
+.kr-solution-image { width: 100%; height: 430px; display: block; object-fit: cover; border-radius: 28px; }
+.kr-solution-copy h2 { margin: 0 0 17px; font-size: 41px; line-height: 1.08; letter-spacing: -1.5px; }
+.kr-solution-copy > p { color: var(--text); font-size: 15px; line-height: 1.75; }
+.kr-brand-quote { margin: 25px 0; padding: 17px 19px; border-left: 3px solid var(--orange); border-radius: 0 15px 15px 0; background: var(--orange-soft); }
+.kr-brand-quote strong { display: block; margin-bottom: 5px; color: var(--green-dark); font-size: 15px; }
+.kr-brand-quote span { color: var(--text); font-size: 11px; line-height: 1.55; }
+
+.kr-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 25px; }
+.kr-stat { min-width: 0; padding: 18px 19px; border: 1px solid var(--line); border-radius: 17px; background: white; }
+.kr-stat-number { margin-bottom: 5px; color: var(--green); font-size: 26px; line-height: 1.05; white-space: nowrap; font-weight: 850; }
+.kr-stat-label { color: var(--text); font-size: 11px; line-height: 1.45; }
+
+.kr-farm-section { padding: 88px 0; background: var(--green-dark); color: white; }
+.kr-farm-head { max-width: 760px; margin-bottom: 48px; }
+.kr-farm-head .kr-label { color: #f5ad55; }
+.kr-farm-head .kr-h2 { color: white; }
+.kr-farm-head .kr-section-description { color: #cbd8d2; }
+.kr-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); position: relative; }
+.kr-flow-item { position: relative; text-align: center; padding: 0 18px; }
+.kr-flow-item:not(:last-child)::after { content: ""; position: absolute; top: 37px; right: -3px; width: 34px; height: 1px; background: rgba(255,255,255,0.35); }
+.kr-flow-item:not(:last-child)::before { content: ""; position: absolute; top: 33px; right: -3px; width: 8px; height: 8px; border-top: 1px solid rgba(255,255,255,0.55); border-right: 1px solid rgba(255,255,255,0.55); transform: rotate(45deg); }
+.kr-flow-circle { width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; margin: 0 auto 17px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: white; font-size: 14px; font-weight: 800; }
+.kr-flow-item strong { display: block; margin-bottom: 6px; font-size: 13px; }
+.kr-flow-item span { display: block; color: #abc0b5; font-size: 10px; line-height: 1.5; }
+
+.kr-benefits { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.kr-benefit { padding: 25px; border: 1px solid var(--line); border-radius: 20px; background: white; }
+.kr-benefit-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 22px; }
+.kr-benefit-number { color: var(--orange); font-size: 11px; font-weight: 800; }
+.kr-benefit-icon { width: 37px; height: 37px; display: flex; align-items: center; justify-content: center; border-radius: 10px; background: var(--green-soft); color: var(--green); font-size: 12px; font-weight: 800; }
+.kr-benefit h3 { margin: 0 0 8px; font-size: 18px; }
+.kr-benefit p { margin: 0; color: var(--text); font-size: 13px; line-height: 1.65; }
+
+.kr-journey-box { padding: 32px; border: 1px solid #d8e8de; border-radius: 28px; background: var(--green-soft); }
+.kr-journey { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.kr-journey-step { position: relative; text-align: center; padding: 12px 18px; }
+.kr-journey-step:not(:last-child)::after { content: ""; position: absolute; top: 36px; right: -1px; width: 38px; height: 1px; background: #8fb6a3; }
+.kr-journey-step:not(:last-child)::before { content: ""; position: absolute; top: 32px; right: -1px; width: 8px; height: 8px; border-top: 1px solid #8fb6a3; border-right: 1px solid #8fb6a3; transform: rotate(45deg); }
+.kr-journey-number { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; border-radius: 50%; background: white; border: 1px solid #d3e4db; color: var(--green); font-size: 13px; font-weight: 800; }
+.kr-journey-step h3 { margin: 0 0 7px; font-size: 15px; }
+.kr-journey-step p { margin: 0; color: var(--text); font-size: 11px; line-height: 1.5; }
+
+.kr-final { padding: 95px 25px; text-align: center; background: #f7f9f7; }
+.kr-final h2 { max-width: 760px; margin: 0 auto 16px; font-size: 43px; line-height: 1.09; letter-spacing: -1.7px; }
+.kr-final p { max-width: 620px; margin: 0 auto 28px; color: var(--text); font-size: 15px; line-height: 1.7; }
+.kr-footer { padding: 27px 0 31px; text-align: center; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.kr-source-note { max-width: 850px; margin: 8px auto 0; font-size: 9px; }
+
+@media (max-width: 850px) {
+  .kr-container { width: min(100% - 32px, 680px); }
+  .kr-nav-links a:not(.kr-nav-cta) { display: none; }
+  .kr-hero, .kr-old-way, .kr-solution { grid-template-columns: 1fr; gap: 40px; }
+  .kr-hero { padding: 58px 0 72px; }
+  .kr-h1 { font-size: 43px; letter-spacing: -1.8px; }
+  .kr-main-image { height: 350px; }
+  .kr-visual-info { left: 10px; }
+  .kr-section { padding: 70px 0; }
+  .kr-h2, .kr-solution-copy h2 { font-size: 34px; }
+  .kr-supplier-grid { grid-template-columns: repeat(2, 1fr); }
+  .kr-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kr-flow { grid-template-columns: 1fr; gap: 31px; }
+  .kr-flow-item { text-align: left; padding: 0; }
+  .kr-flow-circle { margin-left: 0; }
+  .kr-flow-item:not(:last-child)::after { top: 72px; left: 36px; right: auto; width: 1px; height: 29px; }
+  .kr-flow-item:not(:last-child)::before { top: 96px; left: 33px; right: auto; transform: rotate(135deg); }
+  .kr-benefits { grid-template-columns: 1fr; }
+  .kr-journey { grid-template-columns: 1fr; }
+  .kr-journey-step { text-align: left; padding: 12px 0; }
+  .kr-journey-number { margin-left: 0; }
+  .kr-journey-step:not(:last-child)::after { top: auto; right: auto; left: 25px; bottom: -16px; width: 1px; height: 19px; }
+  .kr-journey-step:not(:last-child)::before { top: auto; right: auto; left: 22px; bottom: -17px; transform: rotate(135deg); }
+  .kr-final h2 { font-size: 35px; }
+}
+</style>
+
+<div class="kr-page">
+
+  <div class="kr-container">
+    <nav class="kr-nav">
+      <div class="kr-logo">
+        <div class="kr-logo-mark">K</div>
+        KAMEREO <span class="kr-logo-orange">Journey</span>
+      </div>
+      <div class="kr-nav-links">
+        <a href="#challenge">Thách thức</a>
+        <a href="#solution">Giải pháp</a>
+        <a href="#journey">Hành trình</a>
+        <a class="kr-nav-cta" href="https://kamereo-research.blogspot.com/p/kham-pha-hanh-trinh-thu-mua-f-kamereo.html" data-cta="explore_solution_nav">Khám phá</a>
+      </div>
+    </nav>
+
+    <section class="kr-hero">
+      <div>
+        <div class="kr-eyebrow"><span class="kr-eyebrow-dot"></span>B2B FOOD COMMERCE</div>
+        <h1 class="kr-h1">Một bếp.<br>Hàng trăm nhu cầu.<br><span class="kr-h1-accent">Một nơi để thu mua.</span></h1>
+        <p class="kr-hero-description">Từ rau củ, thịt, hải sản đến thực phẩm khô và vật dụng vận hành, KAMEREO hướng đến việc giúp doanh nghiệp F&amp;B tập trung nhu cầu mua hàng trên một nền tảng.</p>
+        <!-- HERO CTA -->
+        <a class="kr-primary-cta" href="https://kamereo-research.blogspot.com/p/kham-pha-hanh-trinh-thu-mua-f-kamereo.html" data-cta="explore_solution_hero" id="cta-explore-solution">
+          Khám phá hành trình
+          <span class="kr-primary-cta-arrow">+</span>
+        </a>
+        <div class="kr-academic-note">Bài tập học thuật – không phải trang chính thức của thương hiệu KAMEREO.</div>
+      </div>
+
+      <div class="kr-visual">
+        <img class="kr-main-image" src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=85" alt="Nguồn cung nguyên liệu thực phẩm cho doanh nghiệp F&amp;B">
+        <div class="kr-visual-info">
+          <div class="kr-visual-info-label">KAMEREO</div>
+          <div class="kr-visual-info-main">2,000+ products for F&amp;B</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="kr-section kr-section-soft" id="challenge">
+    <div class="kr-container">
+      <div class="kr-old-way">
+        <div class="kr-old-copy">
+          <div class="kr-label">THE PROCUREMENT CHALLENGE</div>
+          <h2 class="kr-h2">Thu mua F&amp;B không chỉ là tìm một sản phẩm.</h2>
+          <p>Khi doanh nghiệp phải làm việc với nhiều nhà cung cấp cho nhiều nhóm hàng, buyer có thể phải xử lý nhiều đầu mối, cuộc trao đổi và đơn hàng riêng biệt.</p>
+          <div class="kr-friction-list">
+            <div class="kr-friction-item"><span class="kr-friction-number">01</span>Tìm nguồn hàng cho từng nhóm sản phẩm</div>
+            <div class="kr-friction-item"><span class="kr-friction-number">02</span>Kiểm tra thông tin từ nhiều đầu mối</div>
+            <div class="kr-friction-item"><span class="kr-friction-number">03</span>Theo dõi nhiều đơn hàng và giao nhận</div>
+            <div class="kr-friction-item"><span class="kr-friction-number">04</span>Đối soát thông tin và chứng từ</div>
+          </div>
+        </div>
+        <div class="kr-chaos-board">
+          <div class="kr-chaos-label">A FRAGMENTED PROCUREMENT JOURNEY</div>
+          <div class="kr-supplier-grid">
+            <div class="kr-supplier"><div class="kr-supplier-top">R</div><strong>Rau củ</strong><span>Nhà cung cấp riêng</span></div>
+            <div class="kr-supplier"><div class="kr-supplier-top">T</div><strong>Thịt</strong><span>Nhà cung cấp riêng</span></div>
+            <div class="kr-supplier"><div class="kr-supplier-top">H</div><strong>Hải sản</strong><span>Nhà cung cấp riêng</span></div>
+            <div class="kr-supplier"><div class="kr-supplier-top">K</div><strong>Đồ khô</strong><span>Nhà cung cấp riêng</span></div>
+            <div class="kr-supplier"><div class="kr-supplier-top">U</div><strong>Đồ uống</strong><span>Nhà cung cấp riêng</span></div>
+            <div class="kr-supplier"><div class="kr-supplier-top">V</div><strong>Vật dụng</strong><span>Nhà cung cấp riêng</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kr-section" id="solution">
+    <div class="kr-container">
+      <div class="kr-solution">
+        <div>
+          <img class="kr-solution-image" src="https://images.unsplash.com/photo-1579113800032-c38bd7635818?auto=format&fit=crop&w=1200&q=85" alt="Nguyên liệu thực phẩm">
+        </div>
+        <div class="kr-solution-copy">
+          <div class="kr-label">THE KAMEREO APPROACH</div>
+          <h2>Gom nhu cầu thu mua về một nơi.</h2>
+          <p>KAMEREO định vị mình là nhà cung cấp B2B cho doanh nghiệp F&amp;B, với danh mục từ thực phẩm tươi sống đến vật dụng nhà bếp. Mục tiêu là giúp doanh nghiệp đơn giản hóa hoạt động mua hàng thay vì phải xử lý quá nhiều nguồn cung riêng lẻ.</p>
+          <div class="kr-brand-quote"><strong>“REDEFINE THE FOOD BUSINESS”</strong><span>KAMEREO mô tả tầm nhìn của mình là đưa công nghệ vào thay thế những thao tác thủ công trong hoạt động cung ứng thực phẩm.</span></div>
+          <div class="kr-stats">
+            <div class="kr-stat"><div class="kr-stat-number">2,000+</div><div class="kr-stat-label">Sản phẩm được KAMEREO công bố</div></div>
+            <div class="kr-stat"><div class="kr-stat-number">4,000+</div><div class="kr-stat-label">Doanh nghiệp được KAMEREO công bố</div></div>
+            <div class="kr-stat"><div class="kr-stat-number">99.0%</div><div class="kr-stat-label">Tỷ lệ giao đúng giờ được công bố</div></div>
+            <div class="kr-stat"><div class="kr-stat-number">98.0%</div><div class="kr-stat-label">Tỷ lệ hoàn thành đơn được công bố</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kr-farm-section">
+    <div class="kr-container">
+      <div class="kr-farm-head">
+        <div class="kr-label">FROM FARM TO YOUR BUSINESS</div>
+        <h2 class="kr-h2">Đằng sau một đơn hàng là cả một chuỗi cung ứng.</h2>
+        <p class="kr-section-description">KAMEREO mô tả mô hình của mình theo hướng kết nối nguồn cung, vận hành và giao hàng để đưa sản phẩm từ nông trại đến doanh nghiệp F&amp;B.</p>
+      </div>
+      <div class="kr-flow">
+        <div class="kr-flow-item"><div class="kr-flow-circle">FARM</div><strong>Farm</strong><span>Nguồn cung từ các đối tác</span></div>
+        <div class="kr-flow-item"><div class="kr-flow-circle">SOURCE</div><strong>Source</strong><span>Tập hợp nhiều nhóm sản phẩm</span></div>
+        <div class="kr-flow-item"><div class="kr-flow-circle">QC</div><strong>Control</strong><span>Kiểm soát trong chuỗi cung ứng</span></div>
+        <div class="kr-flow-item"><div class="kr-flow-circle">LOG</div><strong>Delivery</strong><span>Giao hàng đến doanh nghiệp</span></div>
+        <div class="kr-flow-item"><div class="kr-flow-circle">F&amp;B</div><strong>Your Business</strong><span>Bếp sẵn sàng phục vụ khách hàng</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kr-section">
+    <div class="kr-container">
+      <div class="kr-section-head">
+        <div class="kr-label">WHY THIS MODEL</div>
+        <h2 class="kr-h2">Không chỉ nhiều sản phẩm. Một cách vận hành khác.</h2>
+        <p class="kr-section-description">Những điểm dưới đây được xây dựng từ thông tin KAMEREO công khai về mô hình cung ứng và nền tảng mua hàng của mình.</p>
+      </div>
+      <div class="kr-benefits">
+        <div class="kr-benefit"><div class="kr-benefit-top"><div class="kr-benefit-number">01</div><div class="kr-benefit-icon">01</div></div><h3>Nhiều nhu cầu trên một nền tảng</h3><p>Từ rau củ, trái cây, thịt, hải sản, đồ khô, đồ uống đến vật dụng phục vụ vận hành F&amp;B.</p></div>
+        <div class="kr-benefit"><div class="kr-benefit-top"><div class="kr-benefit-number">02</div><div class="kr-benefit-icon">02</div></div><h3>Mua hàng được số hóa</h3><p>KAMEREO phát triển nền tảng mua hàng nhằm thay thế một phần những thao tác thu mua thủ công bằng quy trình số.</p></div>
+        <div class="kr-benefit"><div class="kr-benefit-top"><div class="kr-benefit-number">03</div><div class="kr-benefit-icon">03</div></div><h3>Giao hàng hướng đến độ ổn định</h3><p>KAMEREO công bố các chỉ số về giao đúng giờ, hoàn thành đơn và vận hành trên trang giới thiệu.</p></div>
+        <div class="kr-benefit"><div class="kr-benefit-top"><div class="kr-benefit-number">04</div><div class="kr-benefit-icon">04</div></div><h3>Hỗ trợ vận hành doanh nghiệp</h3><p>Bên cạnh sản phẩm, KAMEREO công khai các dịch vụ hỗ trợ như giao hàng và xuất hóa đơn cho khách hàng doanh nghiệp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kr-section kr-section-soft" id="journey">
+    <div class="kr-container">
+      <div class="kr-section-head">
+        <div class="kr-label">CUSTOMER JOURNEY</div>
+        <h2 class="kr-h2">Từ khám phá đến mua hàng.</h2>
+        <p class="kr-section-description">Prototype này mô phỏng điểm chuyển tiếp trong hành trình số: buyer khám phá giải pháp → tìm hiểu → tiếp tục sang bước mua hàng.</p>
+      </div>
+      <div class="kr-journey-box">
+        <div class="kr-journey">
+          <div class="kr-journey-step"><div class="kr-journey-number">01</div><h3>Khám phá</h3><p>Nhận biết nhu cầu và tìm nguồn cung phù hợp.</p></div>
+          <div class="kr-journey-step"><div class="kr-journey-number">02</div><h3>Tìm hiểu</h3><p>Xem danh mục và thông tin sản phẩm.</p></div>
+          <div class="kr-journey-step"><div class="kr-journey-number">03</div><h3>Tiếp tục</h3><p>Thực hiện CTA để đến bước tiếp theo.</p></div>
+          <div class="kr-journey-step"><div class="kr-journey-number">04</div><h3>Mua hàng</h3><p>Tiến tới quá trình đặt hàng trên nền tảng.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kr-final">
+    <div class="kr-container">
+      <h2>Bớt thời gian xoay xở nguồn hàng. Thêm thời gian tập trung vào việc kinh doanh.</h2>
+      <p>Khám phá bước tiếp theo của hành trình thu mua dành cho doanh nghiệp F&amp;B.</p>
+      <a class="kr-primary-cta" href="https://kamereo-research.blogspot.com/p/kham-pha-hanh-trinh-thu-mua-f-kamereo.html" data-cta="explore_solution_bottom" id="cta-explore-solution-bottom">Khám phá giải pháp KAMEREO<span class="kr-primary-cta-arrow">+</span></a>
+    </div>
+  </section>
+
+  <div class="kr-container">
+    <footer class="kr-footer">
+      <strong>Bài tập học thuật – không phải trang chính thức của thương hiệu KAMEREO.</strong>
+      <div class="kr-source-note">Nội dung về sản phẩm, mô hình cung ứng và các chỉ số được tham khảo từ thông tin công khai do KAMEREO công bố. Prototype không đại diện cho KAMEREO và không phải trang thương mại điện tử chính thức của doanh nghiệp.</div>
+    </footer>
+  </div>
+</div>
 
