@@ -176,7 +176,7 @@
         <h1 class="kr-h1">Một bếp.<br>Hàng trăm nhu cầu.<br><span class="kr-h1-accent">Một nơi để thu mua.</span></h1>
         <p class="kr-hero-description">Từ rau củ, thịt, hải sản đến thực phẩm khô và vật dụng vận hành, KAMEREO hướng đến việc giúp doanh nghiệp F&amp;B tập trung nhu cầu mua hàng trên một nền tảng.</p>
         <!-- HERO CTA -->
-        <a class="kr-primary-cta" href="https://kamereo-research.blogspot.com/p/kham-pha-hanh-trinh-thu-mua-f-kamereo.html?utm_source=prototype_landing&utm_medium=cta_button&utm_campaign=week2_test&utm_content=cta_solution" data-cta="explore_solution_hero" id="cta-explore-solution">
+        <a class="kr-primary-cta" href="https://kamereo-research.blogspot.com/p/kham-pha-hanh-trinh-thu-mua-f-kamereo.html" data-cta="explore_solution_hero" id="cta-explore-solution">
           Khám phá hành trình
           <span class="kr-primary-cta-arrow">+</span>
         </a>
@@ -310,3 +310,37 @@
     </footer>
   </div>
 </div>
+
+
+<script>
+(function () {
+  const baseParams = {
+    utm_source: "prototype_landing",
+    utm_medium: "cta_button",
+    utm_campaign: "week2_test"
+  };
+
+  document.querySelectorAll('.kr-page a[data-cta]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      try {
+        const url = new URL(link.href, window.location.href);
+
+        // Remove any old UTM values so the test always creates a clean set.
+        Object.keys(baseParams).forEach(function (key) {
+          url.searchParams.delete(key);
+        });
+        url.searchParams.delete('utm_content');
+
+        url.searchParams.set('utm_source', baseParams.utm_source);
+        url.searchParams.set('utm_medium', baseParams.utm_medium);
+        url.searchParams.set('utm_campaign', baseParams.utm_campaign);
+        url.searchParams.set('utm_content', link.dataset.cta || 'cta');
+
+        link.href = url.toString();
+      } catch (error) {
+        // Leave the original destination untouched if URL construction fails.
+      }
+    });
+  });
+})();
+</script>
